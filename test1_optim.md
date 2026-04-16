@@ -1,3 +1,4 @@
+```python 
 """
 软件工程 Lab3 实验代码
 该模块实现了基于文本的单词有向图构建，
@@ -234,12 +235,10 @@ class TextGraph:
         print(f'The bridge words from "{word_1}" to "{word_2}" are', end=':')
         return_val += f'The bridge words from "{word_1}" to "{word_2}" are:'
         while len(bridge_encs) != 1:
-            s = f'"{self.enc_word[bridge_encs.pop()]}'
-            print(s, end='",')
-            return_val += s
-        s = f'"{self.enc_word[bridge_encs.pop()]}'
-        print(s)
-        return_val += s
+            print(f'"{self.enc_word[bridge_encs.pop()]}', end='",')
+            return_val += f'"{self.enc_word[bridge_encs.pop()]}",'
+        print(f"{self.enc_word[bridge_encs.pop()]}.")
+        return_val += f"{self.enc_word[bridge_encs.pop()]}."
         return return_val
 
     def _bridge(self, word_1: str, word_2: str):
@@ -453,3 +452,4 @@ print('page rank:')
 textgraph.cal_page_rank()
 print('random_walk:')
 textgraph.random_walk()
+``` 
